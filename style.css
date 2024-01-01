@@ -1,0 +1,556 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    background: black;
+    color: #fff;
+}
+
+header .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo h1{
+    font-size: 1.5rem;
+}
+
+header .links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .links a{
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all ease-in-out 0.4s;
+}
+header .links a:hover{
+    color: #ffffff96;
+    transition: all ease-in-out 0.4s;
+}
+
+header .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 35px;
+}
+
+header .buttons a{
+    text-decoration: none;
+    color: black;
+    padding: 6px 20px;
+    border-radius: 4px;
+    text-align: center;
+    background:#fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all ease-in-out 0.4s;
+    border: 1.5px solid #fff;
+}
+header .buttons a:hover{
+background: transparent;
+color: #fff;
+border: 1.5px solid #fff;
+transition: all ease-in-out 0.4s;
+}
+
+section{
+    padding-top: 10%;
+}
+
+.blog-post {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 10%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 10%;
+    background-color: #fff;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about p{
+    font-size: 1rem;
+    line-height: 23px;
+    font-weight: 450;
+}
+
+.about .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .title h1{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.about .title .line{
+    background: black;
+    width: 10%;
+    margin-top: -20px;
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.contact{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 10%;
+    background-color: #fff;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .title h1{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.contact .title .line{
+    background: black;
+    width: 10%;
+    margin-top: -20px;
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.contact form{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contact form label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.contact form input,textarea{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1.5px solid black;
+}
+.contact form button{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: black;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.4s;
+}
+.contact form button:hover{
+    background: rgba(0, 0, 0, 0.646);
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+.post-title {
+    color: #333;
+}
+.post-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.post-meta {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #333333b9;
+}
+
+.login-form{
+    width: 500px;
+    height: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.login-form form .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-form form .title h1{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.login-form form .title .line{
+    padding: 3px;
+    background: black;
+    border-radius: 50px;
+    width: 35%;
+    margin-top: -15px;
+}
+
+.login-form form .content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+.login-form form .content label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.login-form form .content input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.3px solid black;
+    margin-top: 5px;
+}
+.login-form form .content button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1.3px solid black;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: black;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+::Placeholder{
+    color: black;
+}
+
+.error{
+    padding: 4px 10px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: #fff;
+    width: 150px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .title h1{
+    font-size: 1.5rem;
+}
+.sidebar .title .line{
+    padding: 3px;
+    width: 40%;
+    border-radius: 50px;
+    background: #fff;
+    margin-top: -10px;
+}
+
+.sidebar .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10%;
+    margin-top: -10%;
+}
+.sidebar .link a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+    font-size: 1rem;
+}
+.sidebar .link a:hover{
+    color: #ffffff96;
+    transition: all ease-in-out 0.4s;
+}
+
+.sidebar .link a img{
+    width: 15%;
+    padding-right: 10px;
+}
+
+.sidebar .account{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar .account h4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 10px;
+    border-style: dotted;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+.sidebar .account a{
+    padding: 6px 10px;
+    background: #fff;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    border: 1.5px solid #fff;
+    transition: all ease-in-out 0.5s;
+}
+.sidebar .account a:hover{
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid #fff;
+    transition: all ease-in-out 0.5s;
+}
+
+.admin-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 191px;
+    margin-right: 2px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container h1{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.title-container .line{
+    padding: 3px;
+    background: black;
+    width: 8%;
+    margin-top: -15px;
+    border-radius: 50px;
+}
+
+.container-content{
+    margin-top: 50px;
+}
+
+.container-content table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.container-content table tr{
+    text-align: center;
+    /* border: 2px solid black; */
+}
+.container-content table tr:nth-child(odd){
+    background: lightgray;
+}
+.container-content table th{
+    background: black;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 40px;
+}
+.container-content table td{
+    padding: 10px;
+}
+.container-content table td img{
+    width: 100%;
+    border-radius: 10px;
+}
+.container-content table td textarea{
+    border-radius: 10px;
+}
+.container-content table td .actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-content table td .actions a{
+    width: 80%;
+    padding: 8px;
+    background: black;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1.5px solid black;
+    transition: all ease-in-out 0.4s;
+    font-size: 0.8rem;
+}
+.container-content table td .actions a:hover{
+    background: transparent;
+    color: black;
+    border: 1.5px solid black;
+    transition: all ease-in-out 0.4s;
+}
+
+.container-content form{
+    width: 500px;
+    height: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:58%;
+    transform: translate(-50%);
+}
+.container-content form .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content form label{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.container-content form input, textarea{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid black;
+    margin-top: 10px;
+}
+
+.container-content form button{
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: black;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.4s;
+}
+
+.container-content form button:hover{
+    background: rgba(0, 0, 0, 0.747);
+    color: #fff;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+

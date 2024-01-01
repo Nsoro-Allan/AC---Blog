@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^home?$ index.php
+
+RewriteRule ^about?$ about.php
+
+RewriteRule ^contact?$ contact.php
+

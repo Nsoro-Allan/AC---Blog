@@ -25,7 +25,7 @@ include("header.php");
 
         // Check if the blog description has more than 40 characters
         $blogDescription = $row['blog_description'];
-        $maxLength = 200;
+        $maxLength = 150;
 
         if (strlen($blogDescription) > $maxLength) {
             // If more than 40 characters, trim the text and add a "Read more" link
@@ -38,11 +38,12 @@ include("header.php");
         ?>
         <article class="blog-post">
             <input type="hidden" value="<?php echo $row['blog_id']; ?>">
-            <img src="./imgs/<?php echo $row['blog_image']; ?>" class="post-image">
+            
+            <img src="./admin/uploads/<?php echo $row['blog_img']; ?>" class="post-image">
 
             <h2 class="post-title"><?php echo $row['blog_title']; ?></h2>
 
-            <p class="post-meta">Author: <?php echo $row['blog_author']; ?> | Date: <?php echo $row['blog_date']; ?></p>
+            <p class="post-meta"><span style="font-weight:bold;">Author:</span> <?php echo $row['blog_author']; ?> | Date: <?php echo $row['blog_date']; ?></p>
 
             <p class="post-content">
                 <span class="short-description"><?php echo $shortDescription; ?></span>

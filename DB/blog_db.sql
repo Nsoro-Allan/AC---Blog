@@ -48,7 +48,7 @@ INSERT INTO `admin` (`admn_id`, `admin_email`, `admin_password`) VALUES
 
 CREATE TABLE `blog` (
   `blog_id` int(11) NOT NULL,
-  `blog_img` varchar(100) NOT NULL,
+  `blog_img` varchar(1000) NOT NULL,
   `blog_title` varchar(100) NOT NULL,
   `blog_author` varchar(100) NOT NULL,
   `blog_date` varchar(100) NOT NULL,

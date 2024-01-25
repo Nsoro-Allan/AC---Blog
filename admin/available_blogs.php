@@ -36,7 +36,6 @@ include("sessions.php")
             <div class="container-content">
                 <table>
                     <tr>
-                        <th>#</th>
                         <th>Blog Image</th>
                         <th>Blog Title</th>
                         <th>Blog Author</th>
@@ -45,14 +44,12 @@ include("sessions.php")
                         <th>Actions</th>
                     </tr>
                     <?php
-                    $select=$con->query("SELECT * FROM blog");
+                    $select=$con->query("SELECT * FROM blog ORDER BY blog_id DESC");
                     while($row=mysqli_fetch_array($select)){
 
                     ?>    
                     <tr>
-                        <td><?php echo $row['blog_id'];?></td>
-
-                        <td><img src='imgs/<?php echo $row['blog_image'];?>'></td>
+                        <td><img src='./uploads/<?php echo $row['blog_img'];?>'></td>
 
                         <td><?php echo $row['blog_title'];?></td>
 
@@ -60,7 +57,7 @@ include("sessions.php")
 
                         <td><?php echo $row['blog_date'];?></td>
 
-                        <td><textarea rows="6" cols="40"><?php echo $row['blog_description'];?></textarea></td>
+                        <td><textarea rows="6" cols="40" readonly><?php echo $row['blog_description'];?></textarea></td>
 
                         <td>
                         <div class="actions">

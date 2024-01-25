@@ -6,27 +6,42 @@ include("sessions.php")
 
 <?php
 if(isset($_POST['submit'])){
-    $blog_image=$_POST['blog_image'];
-    $blog_title=$_POST['blog_title'];
-    $blog_author=$_POST['blog_author'];
-    $blog_date=$_POST['blog_date'];
-    $blog_description=$_POST['blog_description'];
+    $blog_image = mysqli_real_escape_string($con, $_POST['blog_image']);
+    $blog_title = mysqli_real_escape_string($con, $_POST['blog_title']);
+    $blog_author = mysqli_real_escape_string($con, $_POST['blog_author']);
+    $blog_date = mysqli_real_escape_string($con, $_POST['blog_date']);
+    $blog_description = mysqli_real_escape_string($con, $_POST['blog_description']);
 
-    $insert=$con->query("INSERT INTO `blog` VALUES('','$blog_image','$blog_title','$blog_author','$blog_date','$blog_description')");
+    // File Upload Logic
+    if(isset($_FILES['blog_image']) && !empty($_FILES['blog_image']['name'])) {
+        $target_folder = "uploads/";
+        $blog_image = $_FILES['blog_image']['name'];
+        $target_path = $target_folder . $blog_image;
 
-    if($insert){
-        header("location:available_blogs.php?msg=Added New Blog");
+        // Move the uploaded file to the target folder
+        if(move_uploaded_file($_FILES['blog_image']['tmp_name'], $target_path)) {
+            
+            $insert=$con->query("INSERT INTO `blog` VALUES('','$blog_image','$blog_title','$blog_author','$blog_date','$blog_description')");
+
+            if($insert){
+                header("location:available_blogs.php?msg=Added New Blog");
+            }
+            else{
+                echo
+                '
+                <center>
+                <div class="error">
+                    <p>failed to create new blog.</p>
+                </div>
+                </center>
+                ';
+            }
+
+        } else {
+            echo '<center><div class="error"><p>Failed to upload blog image...</p></div></center>';
+        }
     }
-    else{
-        echo
-        '
-        <center>
-        <div class="error">
-            <p>failed to create new blog.</p>
-        </div>
-        </center>
-        ';
-    }
+
 }
 ?>
 
@@ -61,11 +76,11 @@ if(isset($_POST['submit'])){
 
             <div class="container-content">
 
-                <form action="" method="post">
+                <form action="" method="POST"  enctype="multipart/form-data">
 
                 <div class="content">
                     <label>Blog Image:</label>
-                    <input type="file" name="blog_image" required>
+                    <input type="file" name="blog_image" accept="image/*" required>
 
                     <label>Blog Title:</label>
                     <input type="text" name="blog_title" placeholder="Enter your Blog Title..." required>
